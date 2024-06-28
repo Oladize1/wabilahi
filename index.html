@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wabilahi Nigeria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="top-nav-left">
+                <span style="padding-right: 5px;"><i class="fa-solid fa-location-dot"></i></span>
+                Find a wabilahi || For Corporate purchase Email: corporatesales@slot.ng||
+            </div>
+            <div class="top-nav-right">
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">My Wish List (0)</a></li>
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">Compare (0)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle-nav">
+            <div class="middle-nav-left">
+                <h1 class="logo">WABILAHI</h1>
+                <div>
+                    <i class="fa-solid fa-headset fa-3x"></i>
+                    <div>
+                        <p>
+                            Hotline: <br>
+                            <span>01466636</span> <br>
+                            <span>07005000050</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-nav-right">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search entire store here...">
+                        <button class="search-button">Search</button>
+                    </div>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-shopping-bag icon-large"></i>
+                    <span class="badge">5</span>
+                  </div>
+            </div>
+        </div>
+        <div class="bottom-nav">
+          <div class="bottom-nav-left">
+            <div id="menu" class="menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+              </div>
+            <div class="ham">
+                <div id="main">
+                  <span style="font-size:15px;cursor:pointer; font-weight:bold;" onclick="openMenu()">&#9776; <span class="menu-btn-txt">SHOP BY CATEGORIES</span> </span>
+                </div>
+                <div class="menu-list">
+                    <nav>
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                            <li><a href="#">FIND A STORE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+          </div>
+            <div class="search-container">
+              <div class="search-box">
+                  <input type="text" class="search-input" placeholder="Search entire store here...">
+                  <button class="search-button">Search</button>
+              </div>
+          </div>
+        </div>
+    </header>
+    <main>
+        <section class="promo-banner">
+            <div class="carousel-container">
+                <div class="carousel">
+                  <div class="carousel-item"><img src="images/image-1.jpg" alt="Image 1"></div>
+                  <div class="carousel-item"><img src="images/image-2.jpg" alt="Image 2"></div>
+                  <div class="carousel-item"><img src="images/image-3.jpg" alt="Image 3"></div>
+                  <div class="carousel-item"><img src="images/image-1.jpg" alt="Image 4"></div>
+                </div>
+                <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+              </div>
+        </section>
+        <section class="credits">
+          <div>
+            <div>
+              <i class="fa-solid fa-truck icon-large"></i>
+            </div>
+            <div>
+                <h5>Free Delivery</h5><br>
+                <span class="footer-text">
+                    Free delivery with Lagos
+                </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <i class="fa-solid fa-credit-card icon-large"></i>
+            </div>
+            <div>
+               <h5>Safe Payment</h5>
+               <p class="footer-text">100% secure payment</p> 
+            </div>
+          </div>
+          <div>
+            <div>
+              <i class="fa-solid fa-hand-holding-dollar icon-large"></i>
+            </div>
+            <div>
+                <h5>Shop With Confidence</h5>
+                <p class="footer-text">Buy now pay later</p>
+            </div>
+          </div>
+          <div>
+            <i class="fa-regular fa-comments icon-large"></i>
+            <div>
+               <h5>24/7 Help Center</h5>
+               <p class="footer-text">Dedicated online and offline support</p> 
+            </div>
+            <div>
+
+            </div>
+          </div>
+          <div>
+            <div>
+                icon
+            </div>
+            <div>
+                <h5>Friendly Services</h5>
+                <p class="footer-text">30 days satisfaction guarantee</p>
+            </div>
+          </div>  
+        </section>
+        <!-- <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="product1.jpg" alt="Product 1">
+                        <h3>Product 1</h3>
+                        <p>₦93,000.00</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="product2.jpg" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <p>₦17,400.00</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="product3.jpg" alt="Product 3">
+                        <h3>Product 3</h3>
+                        <p>₦219,800.00</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    More product items 
+                </div>
+            </div>
+        </section> -->
+        <section class="product-slider-container">
+            <div class="product-heading">
+                <div><span style="font-weight: bold;">Mobile Phones and Tablets</span> <span class="footer-text">Product</span></div>
+                <div class="accessories-types">
+                    <nav>
+                        <ul>
+                            <li class="footer-text active">Tecno</li>
+                            <li class="footer-text">Infinix</li>
+                            <li class="footer-text">iPhone</li>
+                            <li class="footer-text">SPORTY</li>
+                            <li class="footer-text">Samsung</li>
+                            <li class="footer-text">Oppo</li>
+                            <li class="footer-text">Nokia</li>
+                            <li class="footer-text">Huawai</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="product-slider">
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 1">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 2">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 3">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 4">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+        </div>
+    <button class="product-prev" onclick="moveProductSlider(-1)">&#10094;</button>
+    <button class="product-next" onclick="moveProductSlider(1)">&#10095;</button>
+        </section>
+        <section class="product-slider-container">
+            <div class="product-heading">
+                <div><span style="font-weight: bold;">Laptop & Computers </span><span class="footer-text">Product</span></div>
+                <div class="accessories-types">
+                    <nav>
+                        <ul>
+                            <li class="footer-text active">HP</li>
+                            <li class="footer-text">Apple</li>
+                            <li class="footer-text">ASUS</li>
+                            <li class="footer-text">Lenovo</li>
+                            <li class="footer-text">DELL</li>
+                            <li class="footer-text">Microsoft</li>
+                            <li class="footer-text">intel</li>
+                            <li class="footer-text">Desktops</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="product-slider">
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 1">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 2">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 3">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 4">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+        </div>
+    <button class="product-prev" onclick="moveProductSlider(-1)">&#10094;</button>
+    <button class="product-next" onclick="moveProductSlider(1)">&#10095;</button>
+        </section>
+        <section class="product-slider-container">
+            <div class="product-heading">
+                <div><span style="font-weight: bold;">Electronics</span> <span class="footer-text">Product</span></div>
+                <div class="accessories-types">
+                    <nav>
+                        <ul>
+                            <li class="footer-text active">Televisions</li>
+                            <li class="footer-text">Home & Audio Systems</li>
+                            <li class="footer-text">Fryers</li>
+                            <li class="footer-text">Hair Grooming</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="product-slider">
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 1">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 2">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 3">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+      <div class="product-slider-item">
+        <div class="product-card">
+          <img src="images/image-3.jpg" alt="Product 4">
+          <div class="product-overlay">
+            <button class="product-add-to-cart">Add to Cart</button>
+          </div>
+          <h4>TECNO T301</h4>
+          <p>#17,400.00</p>
+        </div>
+      </div>
+        </div>
+    <button class="product-prev" onclick="moveProductSlider(-1)">&#10094;</button>
+    <button class="product-next" onclick="moveProductSlider(1)">&#10095;</button>
+        </section>
+    </main>
+    <footer>
+        <div class="top-footer-section">
+            <h2>Sign Up For Newsletter</h2>
+            <p class="footer-text">Get the latest and greatest offer from us by subscribing to our newsletter</p>
+            <p class="special-red">Join 1,000,000+ subscribers.</p>
+            <div class="search-cont-box">
+              <div class="search-container">
+                  <div class="search-box">
+                      <input type="text" class="search-input" placeholder="Search entire store here...">
+                      <button class="search-button">Search</button>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="middle-footer-section">
+            <div>
+                <h1 class="logo">WABILAHI</h1>
+                <p class="footer-text">SLOT Systems Limited is the leading retail company for affordable and durable mobile phones, computers, accessories, and various types of Electronics. We consider it necessary to fill up this need in the global information technology sector with emphasis on Africa market.</p>
+                <p class="footer-text">For Corporate purchase Email: corporatesales@wabilahi.ng</p>
+            </div>
+            <div>
+                <h4>INFORMATION</h4>
+                <p class="footer-text">F.A.Q.'s</p>
+                <p class="footer-text">Order History</p>
+                <p class="footer-text">Contact Us</p>
+            </div>
+            <div>
+                <h4>OUR SERVICES</h4>
+                <p class="footer-text">Trade in</p>
+                <p class="footer-text">About Us</p>
+                <p class="footer-text">How To Pay</p>
+            </div>
+            <div>
+                <h4>MY ACCOUNT</h4>
+                <p class="footer-text">Your Account</p>
+                <p class="footer-text">Warranty Policy</p>
+                <p class="footer-text">Privacy Policy</p>
+                <p class="footer-text">Privacy and Cookie Policy</p>
+            </div>
+            <div>
+                <h4>FOLLOW US ON</h4>
+                <p class="facebook">Facebook</p>
+                <p class="twitter">Twitter</p>
+                <p class="instagram">Instagram</p>
+            </div>
+        </div>
+        <div class="bottom-footer-section">
+            <div>
+                <i class="fa-solid fa-headset fa-3x"></i>
+                <div>
+                    <p class="footer-text">Hotline Free 24/7 <br><span style="color: white;">0705000050</span></p>
+                </div>
+            </div>
+            <p class="footer-text">Add: 84 Obafemi Awolowo Way, Ikeja, Lagos</p>
+        </div>
+        <div class="bottom-footer">
+            <div>
+                <p>Copyright &copy; <span class="special-red">Slot Systems Limited</span> 2024 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

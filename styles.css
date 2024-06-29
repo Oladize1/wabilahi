@@ -84,7 +84,7 @@ header {
     }
     .top-nav > .top-nav-right ul li a {
         padding-inline: 10px;
-        font-size: small;
+        font-size: 12px;
     }
 }
 
@@ -164,6 +164,7 @@ header {
 .icon-wrapper {
     position: relative;
     display: inline-block;
+    transition: all .5s;
   }
   .icon-wrapper > i:hover {
     color: orange;
@@ -183,6 +184,7 @@ header {
 
   .icon-large {
     font-size: 32px;
+    color: orange;
   }
 .bottom-nav {
     width: 90%;
@@ -371,8 +373,8 @@ header nav ul li a {
     width: 90%;
     margin: 20px auto;
     padding: 15px;
-    border: 1px solid grey;
-    border-radius: 5px;
+    border: 1px solid rgb(124, 107, 107);
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -382,53 +384,28 @@ header nav ul li a {
 .credits > div {
   display: flex;
   align-items: center;
-  width: 18%;
+  gap: 10px;
+  width: 25%;
 }
 
-.featured-products {
-    background: #f4f4f4;
-    padding: 20px 0;
+.credits > div > .text > h6, p {
+  margin: 0;
+  padding: 0;
 }
 
-.featured-products h2 {
-    text-align: center;
+.credits > div > .text > p {
+  font-size: 12px;
 }
 
-.product-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+i.credits-icon {
+  color: #f90;
 }
 
-.product-item {
-    background: white;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@media screen and (max-width: 952px) {
+  .credits {
+    display: none;
+  }
 }
-
-.product-item img {
-    width: 150px;
-    height: 150px;
-}
-
-.product-item h3 {
-    margin: 10px 0;
-}
-
-.product-item p {
-    color: #f90;
-}
-
-.product-item button {
-    padding: 10px 20px;
-    border: none;
-    background: #333;
-    color: white;
-    cursor: pointer;
-}
-/*  */
   
   .product-slider-container {
     position: relative;
@@ -455,6 +432,16 @@ header nav ul li a {
 
   .accessories-types > nav > ul > li.active {
     color: #a00000;
+  }
+
+  @media screen and (max-width: 952px) {
+    .product-slider-container > .product-heading{
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .accessories-types > nav > ul > li.footer-text {
+      font-size: smaller;
+    }
   }
 
   .product-slider {
@@ -565,8 +552,63 @@ header nav ul li a {
       display: none;
     }
   }
+  /* slow slider */
+  .brand-name {
+    align-items: center;
+    background: #f7f4f4;
+    display: flex;
+    justify-content: center;
+    margin-block: 20px;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7))}
+  }
+  
   
 
+  .slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 80px;
+    margin: auto;
+    overflow:hidden;
+    position: relative;
+    width: 970px;
+    
+    &::before,
+    &::after {
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+      background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    }
+    
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+  
+    &::before {
+      left: 0;
+      top: 0;
+    }
+    
+    .slide-track {
+      animation: scroll 40s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+    
+    .slide {
+      height: 100px;
+      width: 250px;
+    }
+  }
 /*  */
 footer {
     background: rgb(37, 37, 58);
@@ -582,16 +624,15 @@ footer {
     font-size: 15px;
 }
 
+
+
 @media screen and (max-width: 952px) {
   .top-footer-section {
     margin: 40px 20px 10px;
   }
-  .top-footer-section > .search-cont-box {
-    width: 90%;
-    margin-inline: auto;
-  }
-  .top-footer-section > :not(:first-child) {
-    display: none;
+  .top-footer-section p {
+    font-size: small;
+    padding-block: 10px;
   }
 }
 
@@ -617,6 +658,22 @@ footer {
 
 .middle-footer-section > div > P {
     line-height: 1.2rem;
+    padding-block: 10px;
+}
+
+@media screen and (max-width: 952px) {
+  .middle-footer-section > div {
+    width: 100%;
+  }
+
+  .middle-footer-section > div > p {
+    padding-block: 10px;
+    font-size: small;
+  }
+
+  .middle-footer-section > div:not(:first-child) {
+    display: none;
+  }
 }
 
 .bottom-footer-section {
@@ -628,7 +685,7 @@ footer {
 .bottom-footer-section > div {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .bottom-footer-section > div > i {
@@ -637,6 +694,66 @@ footer {
 
 .bottom-footer-section > p {
     text-align: left;
+    padding-block: 10px;
+}
+
+.bottom-footer-section > .FAQ {
+    display: none;
+}
+
+.faq-section {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.faq-section > .faq-item > .faq-question{
+  display: flex;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: max-height 0.3s ease;
+  text-align: left;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.toggle-icon {
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 952px) {
+  .bottom-footer-section {
+    padding-block: 10px;
+  }
+
+  .bottom-footer-section > .FAQ {
+    display: block;
+}
 }
 
 .bottom-footer {
@@ -650,3 +767,4 @@ footer {
     margin-inline: auto;
     padding: 15px 0;
 }
+

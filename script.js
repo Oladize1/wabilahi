@@ -8,6 +8,22 @@ function openMenu() {
     document.getElementById("main").style.marginLeft = "0";
   }
 
+
+  function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.toggle-icon');
+
+    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+        answer.style.maxHeight = '0px';
+        icon.textContent = "+";
+    } else {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.textContent = "-";
+    }
+}
+
+
+
   
 
   let currentSlide = 0;

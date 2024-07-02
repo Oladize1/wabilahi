@@ -14,7 +14,7 @@
         <div class="top-nav">
             <div class="top-nav-left">
                 <span style="padding-right: 5px;"><i class="fa-solid fa-location-dot"></i></span>
-                Find a wabilahi || For Corporate purchase Email: corporatesales@slot.ng||
+                Find a wabilahi || For Corporate purchase Email: corporatesales@wabilahi.ng||
             </div>
             <div class="top-nav-right">
                 <ul>
@@ -172,34 +172,123 @@
         </section>
 
 
-       <section class="product-slider-container">
-        <div class="product-heading">
-            <div><span style="font-weight: bold;">Mobile Phones and Tablets</span> <span class="footer-text">Product</span></div>
-            <div class="accessories-types">
-                <nav>
-                    <ul>
-                        <li class="footer-text active" onclick="filterImages('Tecno')">Tecno</li>
-                        <li class="footer-text" onclick="filterImages('Infinix')">Infinix</li>
-                        <li class="footer-text" onclick="filterImages('iPhone')">iPhone</li>
-                        <li class="footer-text" onclick="filterImages('SPORTY')">SPORTY</li>
-                        <li class="footer-text" onclick="filterImages('Samsung')">Samsung</li>
-                        <li class="footer-text" onclick="filterImages('Oppo')">Oppo</li>
-                        <li class="footer-text" onclick="filterImages('Nokia')">Nokia</li>
-                        <li class="footer-text" onclick="filterImages('Huawai')">Huawai</li>
-                    </ul>
-                </nav>
+        <section class="product-slider-container" id="phones-carousel">
+          <div class="product-heading">
+            <div>
+              <span style="font-weight: bold;">Mobile Phones and Tablets</span>
+              <span class="footer-text">Product</span>
             </div>
-        </div>
-        <div class="carousel-container">
+            <div class="accessories-types">
+              <nav>
+                <ul>
+                  <li class="footer-text active" onclick="filterImages('Tecno', 'phones-carousel')">Tecno</li>
+                  <li class="footer-text" onclick="filterImages('Infinix', 'phones-carousel')">Infinix</li>
+                  <li class="footer-text" onclick="filterImages('iPhone', 'phones-carousel')">iPhone</li>
+                  <li class="footer-text" onclick="filterImages('SPORTY', 'phones-carousel')">SPORTY</li>
+                  <li class="footer-text" onclick="filterImages('Samsung', 'phones-carousel')">Samsung</li>
+                  <li class="footer-text" onclick="filterImages('Oppo', 'phones-carousel')">Oppo</li>
+                  <li class="footer-text" onclick="filterImages('Nokia', 'phones-carousel')">Nokia</li>
+                  <li class="footer-text" onclick="filterImages('Huawai', 'phones-carousel')">Huawai</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="carousel-container">
             <div class="carousel-track">
-                <!-- Slides will be dynamically inserted here -->
+              <!-- Slides will be dynamically inserted here -->
             </div>
             <div class="carousel-buttons">
-                <button id="prevBtn" onclick="moveCarousel(-1)">&#10094;</button>
-                <button id="nextBtn" onclick="moveCarousel(1)">&#10095;</button>
+              <button id="prevBtn" onclick="moveCarousel(-1, 'phones-carousel')">&#10094;</button>
+              <button id="nextBtn" onclick="moveCarousel(1, 'phones-carousel')">&#10095;</button>
             </div>
-        </div>
-       </section>
+          </div>
+        </section>
+        
+        <section class="product-slider-container" id="pcs-carousel">
+          <div class="product-heading">
+            <div>
+              <span style="font-weight: bold;">Laptops and Computers</span>
+              <span class="footer-text">Product</span>
+            </div>
+            <div class="accessories-types">
+              <nav>
+                <ul>
+                  <li class="footer-text active" onclick="filterImages('HP', 'pcs-carousel')">HP</li>
+                  <li class="footer-text" onclick="filterImages('Dell', 'pcs-carousel')">Dell</li>
+                  <li class="footer-text" onclick="filterImages('Apple', 'pcs-carousel')">Apple</li>
+                  <li class="footer-text" onclick="filterImages('Asus', 'pcs-carousel')">Asus</li>
+                  <li class="footer-text" onclick="filterImages('Acer', 'pcs-carousel')">Acer</li>
+                  <li class="footer-text" onclick="filterImages('Lenovo', 'pcs-carousel')">Lenovo</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <!-- Slides will be dynamically inserted here -->
+            </div>
+            <div class="carousel-buttons">
+              <button onclick="moveCarousel(-1, 'pcs-carousel')">&#10094;</button>
+              <button onclick="moveCarousel(1, 'pcs-carousel')">&#10095;</button>
+            </div>
+          </div>
+        </section>
+        
+        <section class="product-slider-container" id="electronics-carousel">
+          <div class="product-heading">
+            <div>
+              <span style="font-weight: bold;">Electronics</span>
+              <span class="footer-text">Product</span>
+            </div>
+            <div class="accessories-types">
+              <nav>
+                <ul>
+                  <li class="footer-text active" onclick="filterImages('Televisions', 'electronics-carousel')">Televisions</li>
+                  <li class="footer-text" onclick="filterImages('Home-&-Audio-Systems', 'electronics-carousel')">Home & Audio Systems</li>
+                  <li class="footer-text" onclick="filterImages('Fryers', 'electronics-carousel')">Fryers</li>
+                  <li class="footer-text" onclick="filterImages('Hair-Grooming', 'electronics-carousel')">Hair Grooming</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <!-- Slides will be dynamically inserted here -->
+            </div>
+            <div class="carousel-buttons">
+              <button onclick="moveCarousel(-1, 'electronics-carousel')">&#10094;</button>
+              <button onclick="moveCarousel(1, 'electronics-carousel')">&#10095;</button>
+            </div>
+          </div>
+        </section>
+        <section class="product-slider-container" id="accessories-carousel">
+          <div class="product-heading">
+            <div>
+              <span style="font-weight: bold;">Accessories</span>
+              <span class="footer-text">Product</span>
+            </div>
+            <div class="accessories-types">
+              <nav>
+                <ul>
+                  <li class="footer-text active" onclick="filterImages('accessories', 'accessories-carousel')">accessories</li>
+                  <li class="footer-text" onclick="filterImages('SPORTY', 'accessories-carousel')">SPORTY</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <!-- Slides will be dynamically inserted here -->
+            </div>
+            <div class="carousel-buttons">
+              <button onclick="moveCarousel(-1, 'accessories-carousel')">&#10094;</button>
+              <button onclick="moveCarousel(1, 'accessories-carousel')">&#10095;</button>
+            </div>
+          </div>
+        </section>
+      
+        
+        
        
   
         

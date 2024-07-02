@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-slider-container {
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .product-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .accessories-types ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accessories-types li {
+            cursor: pointer;
+        }
+
+        .accessories-types .active {
+            color: #a00000;
+        }
+
+        .carousel-container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            min-width: 50%; /* 2 items on small screens */
+        }
+
+        @media (min-width: 768px) {
+            .carousel-item {
+                min-width: 33.33%; /* 3 items on medium screens */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .carousel-item {
+                min-width: 25%; /* 4 items on large screens */
+            }
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .image-wrapper {
+            position: relative;
+        }
+
+        .product-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .product-card h4 {
+            color: rgb(65, 65, 221);
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        .product-card p {
+            text-align: left;
+            margin: 0 0 10px;
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-wrapper:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .product-add-to-cart {
+            background: #ff6600;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .product-add-to-cart:hover {
+            background: #ff4500;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <section class="product-slider-container">
+        <div class="product-heading">
+            <div><span style="font-weight: bold;">Mobile Phones and Tablets</span> <span class="footer-text">Product</span></div>
+            <div class="accessories-types">
+                <nav>
+                    <ul>
+                        <li class="footer-text active" onclick="filterImages('Tecno')">Tecno</li>
+                        <li class="footer-text" onclick="filterImages('Infinix')">Infinix</li>
+                        <li class="footer-text" onclick="filterImages('iPhone')">iPhone</li>
+                        <li class="footer-text" onclick="filterImages('SPORTY')">SPORTY</li>
+                        <li class="footer-text" onclick="filterImages('Samsung')">Samsung</li>
+                        <li class="footer-text" onclick="filterImages('Oppo')">Oppo</li>
+                        <li class="footer-text" onclick="filterImages('Nokia')">Nokia</li>
+                        <li class="footer-text" onclick="filterImages('Huawai')">Huawai</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Slides will be dynamically inserted here -->
+            </div>
+            <div class="carousel-buttons">
+                <button id="prevBtn" onclick="moveCarousel(-1)">&#10094;</button>
+                <button id="nextBtn" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const products = {
+            Tecno: [
+                { image: 'images/tecno1.jpg', title: 'TECNO T301', price: '#17,400.00' },
+                { image: 'images/tecno2.jpg', title: 'TECNO T302', price: '#18,400.00' },
+                { image: 'images/tecno3.jpg', title: 'TECNO T303', price: '#19,400.00' },
+                { image: 'images/tecno4.jpg', title: 'TECNO T304', price: '#20,400.00' },
+            ],
+            Infinix: [
+                { image: 'images/infinix1.jpg', title: 'Infinix S1', price: '#25,400.00' },
+                { image: 'images/infinix2.jpg', title: 'Infinix S2', price: '#26,400.00' },
+                { image: 'images/infinix3.jpg', title: 'Infinix S3', price: '#27,400.00' },
+                { image: 'images/infinix4.jpg', title: 'Infinix S4', price: '#28,400.00' },
+            ],
+            iPhone: [
+                { image: 'images/iphone1.jpg', title: 'iPhone 12', price: '#400,000.00' },
+                { image: 'images/iphone2.jpg', title: 'iPhone 11', price: '#300,000.00' },
+                { image: 'images/iphone3.jpg', title: 'iPhone X', price: '#250,000.00' },
+                { image: 'images/iphone4.jpg', title: 'iPhone 8', price: '#200,000.00' },
+            ],
+            // Add more categories similarly
+        };
+
+        const carouselTrack = document.querySelector('.carousel-track');
+        let currentSlide = 0;
+        let itemsToShow = 2;
+
+        function filterImages(category) {
+            // Clear existing slides
+            carouselTrack.innerHTML = '';
+
+            // Add new slides based on the selected category
+            products[category].forEach(product => {
+                const slide = document.createElement('div');
+                slide.classList.add('carousel-item');
+                slide.innerHTML = `
+                    <div class="product-card">
+                        <div class="image-wrapper">
+                            <img src="${product.image}" alt="${product.title}">
+                            <div class="product-overlay">
+                                <button class="product-add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <h4>${product.title}</h4>
+                        <p>${product.price}</p>
+                    </div>
+                `;
+                carouselTrack.appendChild(slide);
+            });
+
+            // Reset slide position
+            currentSlide = 0;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const slideWidth = document.querySelector('.carousel-item').clientWidth;
+            carouselTrack.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        function moveCarousel(step) {
+            const items = document.querySelectorAll('.carousel-item');
+            const totalItems = items.length;
+
+            if (step === 1) {
+                if (currentSlide < totalItems - itemsToShow) {
+                    currentSlide++;
+                }
+            } else if (step === -1) {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                }
+            }
+
+            updateCarousel();
+        }
+
+        function handleResize() {
+            const width = window.innerWidth;
+            if (width < 768) {
+                itemsToShow = 2;
+            } else if (width < 1024) {
+                itemsToShow = 3;
+            } else {
+                itemsToShow = 1;
+            }
+            updateCarousel();
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        // Initial load
+        filterImages('Tecno');
+        handleResize();
+    </script>
+</body>
+</html>

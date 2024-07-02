@@ -6,8 +6,10 @@
     <title>Wabilahi Nigeria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
+  <button id="back-to-top" onclick="scrollToTop()">↑</button>
     <header>
         <div class="top-nav">
             <div class="top-nav-left">
@@ -84,7 +86,27 @@
         </div>
     </header>
     <main>
-        <section class="promo-banner">
+      <!-- <section class="banner">
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/image-1.jpg" alt="Image 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/image-2.jpg" alt="Image 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/image-3.jpg" alt="Image 3">
+                </div>
+            </div>
+             Add Pagination if needed 
+            <div class="swiper-pagination"></div>
+             Add Navigation if needed 
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section> -->
+        <!-- <section class="promo-banner">
             <div class="carousel-container">
                 <div class="carousel">
                   <div class="carousel-item"><img src="images/image-1.jpg" alt="Image 1"></div>
@@ -95,7 +117,9 @@
                 <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
                 <button class="next" onclick="moveCarousel(1)">&#10095;</button>
               </div>
-        </section>
+        </section> -->
+
+
         <section class="credits">
           <div>
             <div>
@@ -138,7 +162,7 @@
           </div>
           <div>
             <div>
-                icon
+              <i class="fa-regular fa-calendar-check icon-large"></i>
             </div>
             <div class="text">
                 <h6>Friendly Services</h6>
@@ -146,217 +170,42 @@
             </div>
           </div>  
         </section>
-        <!-- <section class="featured-products">
-            <div class="container">
-                <h2>Featured Products</h2>
-                <div class="product-grid">
-                    <div class="product-item">
-                        <img src="product1.jpg" alt="Product 1">
-                        <h3>Product 1</h3>
-                        <p>₦93,000.00</p>
-                        <button>Add to Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <img src="product2.jpg" alt="Product 2">
-                        <h3>Product 2</h3>
-                        <p>₦17,400.00</p>
-                        <button>Add to Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <img src="product3.jpg" alt="Product 3">
-                        <h3>Product 3</h3>
-                        <p>₦219,800.00</p>
-                        <button>Add to Cart</button>
-                    </div>
-                    More product items 
-                </div>
+
+
+       <section class="product-slider-container">
+        <div class="product-heading">
+            <div><span style="font-weight: bold;">Mobile Phones and Tablets</span> <span class="footer-text">Product</span></div>
+            <div class="accessories-types">
+                <nav>
+                    <ul>
+                        <li class="footer-text active" onclick="filterImages('Tecno')">Tecno</li>
+                        <li class="footer-text" onclick="filterImages('Infinix')">Infinix</li>
+                        <li class="footer-text" onclick="filterImages('iPhone')">iPhone</li>
+                        <li class="footer-text" onclick="filterImages('SPORTY')">SPORTY</li>
+                        <li class="footer-text" onclick="filterImages('Samsung')">Samsung</li>
+                        <li class="footer-text" onclick="filterImages('Oppo')">Oppo</li>
+                        <li class="footer-text" onclick="filterImages('Nokia')">Nokia</li>
+                        <li class="footer-text" onclick="filterImages('Huawai')">Huawai</li>
+                    </ul>
+                </nav>
             </div>
-        </section> -->
-        <section class="product-slider-container">
-            <div class="product-heading">
-                <div><span style="font-weight: bold;">Mobile Phones and Tablets</span> <span class="footer-text">Product</span></div>
-                <div class="accessories-types">
-                    <nav>
-                        <ul>
-                            <li class="footer-text active">Tecno</li>
-                            <li class="footer-text">Infinix</li>
-                            <li class="footer-text">iPhone</li>
-                            <li class="footer-text">SPORTY</li>
-                            <li class="footer-text">Samsung</li>
-                            <li class="footer-text">Oppo</li>
-                            <li class="footer-text">Nokia</li>
-                            <li class="footer-text">Huawai</li>
-                        </ul>
-                    </nav>
-                </div>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Slides will be dynamically inserted here -->
             </div>
-            <div class="product-slider">
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 1">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 2">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 3">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 4">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-        </div>
-    <button class="product-prev" onclick="moveProductSlider(-1)">&#10094;</button>
-    <button class="product-next" onclick="moveProductSlider(1)">&#10095;</button>
-        </section>
-        <section class="product-slider-container">
-            <div class="product-heading">
-                <div><span style="font-weight: bold;">Laptop & Computers </span><span class="footer-text">Product</span></div>
-                <div class="accessories-types">
-                    <nav>
-                        <ul>
-                            <li class="footer-text active">HP</li>
-                            <li class="footer-text">Apple</li>
-                            <li class="footer-text">ASUS</li>
-                            <li class="footer-text">Lenovo</li>
-                            <li class="footer-text">DELL</li>
-                            <li class="footer-text">Microsoft</li>
-                            <li class="footer-text">intel</li>
-                            <li class="footer-text">Desktops</li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="carousel-buttons">
+                <button id="prevBtn" onclick="moveCarousel(-1)">&#10094;</button>
+                <button id="nextBtn" onclick="moveCarousel(1)">&#10095;</button>
             </div>
-            <div class="product-slider">
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 1">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
         </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 2">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 3">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 4">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-        </div>
-    <button class="product-prev" onclick="moveProductSlider(-1)">&#10094;</button>
-    <button class="product-next" onclick="moveProductSlider(1)">&#10095;</button>
-        </section>
-        <section class="product-slider-container">
-            <div class="product-heading">
-                <div><span style="font-weight: bold;">Electronics</span> <span class="footer-text">Product</span></div>
-                <div class="accessories-types">
-                    <nav>
-                        <ul>
-                            <li class="footer-text active">Televisions</li>
-                            <li class="footer-text">Home & Audio Systems</li>
-                            <li class="footer-text">Fryers</li>
-                            <li class="footer-text">Hair Grooming</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="product-slider">
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 1">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 2">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 3">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-      <div class="product-slider-item">
-        <div class="product-card">
-          <img src="images/image-3.jpg" alt="Product 4">
-          <div class="product-overlay">
-            <button class="product-add-to-cart">Add to Cart</button>
-          </div>
-          <h4>TECNO T301</h4>
-          <p>#17,400.00</p>
-        </div>
-      </div>
-        </div>
-    <button class="product-prev" onclick="moveProductSlider(-1)">&#10094;</button>
-    <button class="product-next" onclick="moveProductSlider(1)">&#10095;</button>
-        </section>
+       </section>
+       
+  
+        
+
+
+
         <section class="brand-name">
           <div class="slider">
             <div class="slide-track">
@@ -410,7 +259,7 @@
         <div class="middle-footer-section">
             <div>
                 <h1 class="logo">WABILAHI</h1>
-                <p class="footer-text">SLOT Systems Limited is the leading retail company for affordable and durable mobile phones, computers, accessories, and various types of Electronics. We consider it necessary to fill up this need in the global information technology sector with emphasis on Africa market.</p>
+                <p class="footer-text">WABILAHI Systems Limited is the leading retail company for affordable and durable mobile phones, computers, accessories, and various types of Electronics. We consider it necessary to fill up this need in the global information technology sector with emphasis on Africa market.</p>
                 <p class="footer-text">For Corporate purchase Email: corporatesales@wabilahi.ng</p>
             </div>
             <div>
@@ -503,6 +352,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -156,7 +156,7 @@ const products = {
     // Get products for the selected category
     const categoryProducts = products[category];
   
-    // Loop through products and create slides
+    // Looping  through products and create slides
     categoryProducts.forEach(product => {
       const slide = document.createElement('div');
       slide.classList.add('carousel-item');

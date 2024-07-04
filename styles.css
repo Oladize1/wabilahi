@@ -45,11 +45,80 @@ body {
     font-weight: 500;
 }
 
+/* online status */
+.chat-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 5px; 
+  right: 5px; 
+  z-index: 1000;
+}
+
+.chat-text {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.chat-button {
+  padding: 10px 20px;
+  background-color: #c00;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chat-button:hover {
+  background-color: #900;
+}
+/* end online */
+.vertical-menu {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.menu-item {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background-color: orange;
+}
+
+.menu-item > i:hover {
+  color: white;
+}
+
+.menu-item img {
+  width: 24px;
+  height: 24px;
+}
 /* Back to top */
 #back-to-top {
   position: fixed;
   z-index: 1000;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   width: 35px;
   height: 35px;
@@ -334,9 +403,60 @@ header nav ul li a {
 }
 
 /* End of header section */
- 
 
-  /* Credits section */
+/* Intro carousel */
+.banner {
+  margin: 10px 0;
+  height: 400px;
+  display: flex;
+}
+.banner-1, .banner-2 {
+  width: 50%;
+}
+.banner-2 img {
+  width: 100%;
+  height: 400px;
+}
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media screen and (max-width: 1200px) {
+  .banner {
+    margin: 0;
+  }
+  .banner-1 {
+    width: 100%;
+  }
+  .banner-2 {
+    display: none;
+  }
+  
+  swiper-slide img {
+    object-fit: cover;
+  }
+}
+
+
+/* end intro carousel */
+
+/* Credits section */
 
 .credits {
     width: 90%;
@@ -558,6 +678,31 @@ i.credits-icon {
 }
 
 /* End products section */
+
+/* ads section */
+
+.ads {
+  width: 80%;
+  margin-block: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.ads > .ads-img img {
+  width: 350px;
+}
+
+@media screen and (max-width: 952px) {
+  .ads > .ads-img {
+    margin-inline: auto;
+  }
+  .ads > .ads-img:not(:first-child) {
+    display: none;
+  }
+}
+
+/* end ads section */
 
   /* slow slider */
   .brand-name {

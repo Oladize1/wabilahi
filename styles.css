@@ -682,19 +682,18 @@ i.credits-icon {
 
 .ads {
   width: 80%;
-  margin-block: 20px;
+  margin: 20px auto;
   display: flex;
   justify-content: space-between;
-  margin: auto;
 }
 
 .ads > .ads-img img {
-  width: 350px;
+  width: 300px;
 }
 
 @media screen and (max-width: 952px) {
   .ads > .ads-img {
-    margin-inline: auto;
+    margin: auto;
   }
   .ads > .ads-img:not(:first-child) {
     display: none;

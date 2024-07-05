@@ -189,7 +189,7 @@ header {
         width: 100%;
     }
     .top-nav > .top-nav-right ul li a {
-        padding-inline: 10px;
+        padding-inline: 7px;
         font-size: 12px;
     }
 }

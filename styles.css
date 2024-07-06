@@ -189,12 +189,13 @@ header {
     }
     .top-nav > .top-nav-right {
         width: 100%;
+        text-align: center;
     }
     .top-nav > .top-nav-right ul li:not(:first-child) {
       border: none;
   }
     .top-nav > .top-nav-right ul li a{
-        font-size: 10px;
+        font-size: small;
         text-align: center;
         padding-inline: 0;
     }
